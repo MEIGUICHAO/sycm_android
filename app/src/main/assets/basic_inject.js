@@ -42,40 +42,38 @@ function setSearchWord(shopword){
 }
 
 function goGetChecked(){
+    var nums = document.getElementsByClassName("num");
+    for(var i = 0;i<num.length;i++){
+        localMethod.JI_LOG(nums.value+"-----------"+i);
+    }
 
 }
 
 function operaSearch(){
-
-//    var as = document.getElementsByTagName("a");
-//    for (var i = 0; i < as.length; i++) {
-//        localMethod.JI_LOG(as[i].innerHTML+"aaaaa_~~~~"+i);
-//    }
-    var options = document.getElementsByClassName("checkbox selected undefined");
     var optionsUnselected = document.getElementsByClassName("option");
-    for (var i = 0; i < options.length; i++) {
+    optionsUnselected[8].click();
+    optionsUnselected[9].click();
+    optionsUnselected[10].click();
+    optionsUnselected[11].click();
+    optionsUnselected[12].click();
+    optionsUnselected[13].click();
+    optionsUnselected[14].click();
 
-        foreachThings(options,i);
+    setTimeout(function(){
+        optionsUnselected[8].click();
+        optionsUnselected[18].click();
+    },500);
 
-
-    }
-//    options[4].click();
-    for (var i = 0; i < optionsUnselected.length; i++) {
-//        if(optionsUnselected[i].innerHTML.indexOf("支付转化率") != -1 ){
-//               optionsUnselected[i].click();
-//        }
-        localMethod.JI_LOG(optionsUnselected[i].innerHTML+"undefined_option~~~~"+i);
-        localMethod.JI_LOG(optionsUnselected[i].value+"undefined_option~~~~"+i);
-    }
-//    options[5].click();
-//    optionsUnselected[7].click();
-//    optionsUnselected[18].click();
+    setTimeout(function(){
+        optionsUnselected[11].click();
+        optionsUnselected[13].click();
+    },1000);
 }
 
 function foreachThings(options,i){
 
         setTimeout(function(){
-           options[i].click();
+//           options[i].click();
            localMethod.JI_LOG(options[i].innerHTML+"check_option~~~~"+i);
 
         },500*(i+1));

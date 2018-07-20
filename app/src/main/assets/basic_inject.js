@@ -70,6 +70,7 @@ function setSearchWord(shopword){
             findForClick(as,"搜索");
             var as2 = document.getElementsByTagName("a");
             findForClick(as2,"相关搜索词");
+
     },2000);
 }
 
@@ -167,25 +168,18 @@ function accMul(arg1,arg2){
  }
 }
 
+//指标选择
 function operaSearch(){
-    var optionsUnselected = document.getElementsByClassName("option");
-    optionsUnselected[8].click();
-    optionsUnselected[9].click();
-    optionsUnselected[10].click();
-    optionsUnselected[11].click();
-    optionsUnselected[12].click();
-    optionsUnselected[13].click();
-    optionsUnselected[14].click();
 
-    setTimeout(function(){
-        optionsUnselected[8].click();
-        optionsUnselected[18].click();
-    },500);
+    var checkboxs = document.getElementsByClassName("checkbox undefined undefined");
+    var optionsClick = document.getElementsByClassName("option");
 
-    setTimeout(function(){
-        optionsUnselected[11].click();
-        optionsUnselected[13].click();
-    },1000);
+    for(var i=0;i<checkboxs.length;i++){
+        if(checkboxs[i].innerText=="搜索人数占比"||checkboxs[i].innerText=="搜索热度"||checkboxs[i].innerText=="商城点击占比"
+        ||checkboxs[i].innerText=="直通车参考价"||checkboxs[i].innerText=="支付转化率"){
+           optionsClick[i].click();
+        }
+    }
 }
 
 function foreachThings(options,i){

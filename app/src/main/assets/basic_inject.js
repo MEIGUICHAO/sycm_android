@@ -84,9 +84,25 @@ function findForClick(as,word){
     }
 }
 
-
+//竞争力、热词获取排序
 function goGetChecked(){
     var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
+
+    for(var j=0;j<5;j++){
+        setTimeout(function(){
+            getTableData(table);
+            var as = document.getElementsByTagName("a");
+            findForClick(as,"下一页 >");
+        },500*(j+1));
+    }
+
+    setTimeout(function(){
+        localMethod.getHotShopResult();
+    },3000);
+}
+
+
+function getTableData(table){
     for(var i=0;i<table.rows.length;i++){
         var child = table.getElementsByTagName("tr")[i];
         var text = child.children[0].innerText;
@@ -108,27 +124,17 @@ function goGetChecked(){
             text3 = text3.replace(",","").replace(",","");
             localMethod.JI_LOG(text1+"!!!!!!!!");
             localMethod.JI_LOG(text3+"!!!!!!!!");
-            if(text3!=("0")){
+            if(text3!=("0")&&text1>2000){
                 var jzl = accDiv(accMul(accMul(text1,djl),zhl),text3);
                 var rc = accDiv(text1,text3);
                 localMethod.JI_LOG(jzl+"~~~~~");
                 localMethod.JI_LOG(rc+"~~~~~");
-    //            localMethod.JI_LOG(jzl+"~~~~~");
                 localMethod.shopResult(text,jzl,rc);
             }
 
 
         }
-
-//        localMethod.JI_LOG(text1+"!!!!!!!!");
-//        localMethod.JI_LOG(text2+"!!!!!!!!");
-//        localMethod.JI_LOG(text3+"!!!!!!!!");
-//        localMethod.JI_LOG(text4+"!!!!!!!!");
     }
-    localMethod.getHotShopResult();
-//    localMethod.mapClear();
-
-
 }
 
 //乘法

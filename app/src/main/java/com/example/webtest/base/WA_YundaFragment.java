@@ -63,7 +63,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	}
 
 	protected void goSearch(final String search) {
-		handlerJs("setSearchWord(\"" + "童鞋" + "\");");
+		handlerJs("setSearchWord(\"" + "烧烤" + "\");");
 	}
 
 	private void handlerJs(final String strlogic) {
@@ -445,6 +445,14 @@ public class WA_YundaFragment extends WA_BaseFragment
 		public void JI_createLog(String infoStr) throws IOException
 		{
 			createLog(infoStr);
+		}
+
+
+		@JavascriptInterface
+		public void getTargetIndex() throws IOException
+		{
+			LogUtil.e("------------getTargetIndex------------");
+			handlerJs("operaSearch();");
 		}
 	}
 

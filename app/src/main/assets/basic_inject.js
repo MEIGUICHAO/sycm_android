@@ -70,6 +70,7 @@ function setSearchWord(shopword){
             findForClick(as,"搜索");
             var as2 = document.getElementsByTagName("a");
             findForClick(as2,"相关搜索词");
+            setTimeout(function(){localMethod.getTargetIndex();},2000);
 
     },2000);
 }
@@ -180,6 +181,7 @@ function operaSearch(){
            optionsClick[i].click();
         }
     }
+    goGetChecked();
 }
 
 function foreachThings(options,i){

@@ -11,6 +11,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.Toast;
 
+import com.example.webtest.io.LogUtil;
 import com.example.webtest.io.WA_Parameters;
 
 import java.io.IOException;
@@ -54,6 +55,10 @@ public class WA_YundaFragment extends WA_BaseFragment
 	protected void goGetChecked() {
 
 		handlerJs("goGetChecked();");
+	}
+	protected void check() {
+
+		handlerJs("check();");
 	}
 
 	protected void goSearch(final String search) {
@@ -399,7 +404,8 @@ public class WA_YundaFragment extends WA_BaseFragment
 		@JavascriptInterface
 		public void JI_LOG(String content)
 		{
-			Log.e(TAG, "JI_LOG: " + content);
+//			Log.e(TAG, "JI_LOG: " + content);
+			LogUtil.e(TAG, "JI_LOG: " + content);
 //			Toast.makeText(mContext, content, Toast.LENGTH_SHORT).show();
 		}
 

@@ -21,6 +21,35 @@ function goSearchClick(){
 
 }
 
+
+function check(){
+    var as = document.getElementsByTagName("a");
+    var checkboxs = document.getElementsByClassName("checkbox undefined undefined");
+    var options = document.getElementsByClassName("option");
+        localMethod.JI_LOG(as.length);
+        localMethod.JI_LOG(checkboxs.length);
+        localMethod.JI_LOG(options.length);
+    var text = "--------as--------"+ "\n";
+    for(var i=0;i<as.length;i++){
+        text = text + i + "\n"+",innerText:"+as[i].innerText+
+//        ",innerHTML:"+as[i].innerHTML+
+        ",value:"+as[i].value + ",as:"+as[i]+"\n";
+    }
+        localMethod.JI_LOG(text);
+    text = "--------checkboxs--------"+ "\n";
+    for(var i=0;i<checkboxs.length;i++){
+        text = text + i+ "\n" +"checkboxs:"+checkboxs[i]+",innerText:"+checkboxs[i].innerText+
+//        ",innerHTML:"+checkboxs[i].innerHTML+
+        ",value:"+checkboxs[i].value+"\n";
+    }
+            localMethod.JI_LOG(text);
+    text = "--------options--------"+ "\n";
+    for(var i=0;i<options.length;i++){
+        text = text + i+ "\n" + "options:"+options[i]+",innerText:"+options[i].innerText+",innerHTML:"+options[i].innerHTML+",value:"+options[i].value+"\n";
+    }
+    localMethod.JI_LOG(text);
+}
+
 function goSearchWord(){
     var as = document.getElementsByTagName("a");
     as[26].click();

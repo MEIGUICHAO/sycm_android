@@ -64,12 +64,15 @@ function goGetChecked(){
             text3 = text3.replace(",","").replace(",","");
             localMethod.JI_LOG(text1+"!!!!!!!!");
             localMethod.JI_LOG(text3+"!!!!!!!!");
-            var jzl = accDiv(accMul(accMul(text1,djl),zhl),text3);
-            var rc = accDiv(text1,text3);
-            localMethod.JI_LOG(jzl+"~~~~~");
-            localMethod.JI_LOG(rc+"~~~~~");
-//            localMethod.JI_LOG(jzl+"~~~~~");
-            localMethod.shopResult(text,jzl,rc);
+            if(text3!=("0")){
+                var jzl = accDiv(accMul(accMul(text1,djl),zhl),text3);
+                var rc = accDiv(text1,text3);
+                localMethod.JI_LOG(jzl+"~~~~~");
+                localMethod.JI_LOG(rc+"~~~~~");
+    //            localMethod.JI_LOG(jzl+"~~~~~");
+                localMethod.shopResult(text,jzl,rc);
+            }
+
 
         }
 
@@ -90,10 +93,12 @@ function accMul(arg1,arg2){
     var m=0,s1=arg1.toString(),s2=arg2.toString();
     try{
         m+=s1.split(".")[1].length
-        }catch(e){}
+        }catch(e){
+        }
     try{
         m+=s2.split(".")[1].length
-        }catch(e){}
+        }catch(e){
+        }
     return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m);
  }catch(e){
     return 0;

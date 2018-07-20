@@ -14,7 +14,12 @@ import android.widget.Toast;
 import com.example.webtest.io.WA_Parameters;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static android.content.ContentValues.TAG;
 
@@ -374,8 +379,15 @@ public class WA_YundaFragment extends WA_BaseFragment
 		@JavascriptInterface
 		public void getHotShopResult()
 		{
+			Log.e(TAG, "------------------------------------------------");
+			sortMap(jzlMap,"---------------------zjl---------------------------"+"\n");
+			Log.e(TAG, "*************************************************");
+			sortMap(rcMap,"---------------------rc---------------------------"+"\n");
+			mapClear();
 
 		}
+
+
 
 
 		@JavascriptInterface
@@ -429,8 +441,33 @@ public class WA_YundaFragment extends WA_BaseFragment
 		}
 	}
 
+	private void sortMap(Map map,String str) {
+		List<Map.Entry<String,Float>> list = new ArrayList<Map.Entry<String,Float>>(map.entrySet());
+		Collections.sort(list,new Comparator<Map.Entry<String,Float>>() {
+            //升序排序
+            public int compare(Map.Entry<String, Float> o1,
+                               Map.Entry<String, Float> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
 
+        });
 
+		for(Map.Entry<String,Float> mapping:list){
+			str = str + mapping.getKey()+":"+mapping.getValue()+"\n";
+        }
+			Log.e("sortMap: ",str);
+	}
+
+	public void mapClear()
+	{
+
+		if (null != jzlMap) {
+			jzlMap.clear();
+		}
+		if (null != rcMap) {
+			rcMap.clear();
+		}
+	}
 
 
 	private void showGuide( ){

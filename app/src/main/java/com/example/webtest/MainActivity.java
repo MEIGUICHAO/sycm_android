@@ -14,7 +14,7 @@ import com.example.webtest.io.WA_Parameters;
 
 public class MainActivity extends Activity
 {
-	private static final String[] TMALL_FLAG ={ "·ñ", "ÊÇ" };
+	private static final String[] TMALL_FLAG ={ "å¦", "æ˜¯" };
 
 	private EditText keywordEt;
 	private EditText titleEt;
@@ -62,14 +62,14 @@ public class MainActivity extends Activity
 			{
 				switch (position)
 				{
-				case 0:
-					isTmall = false;
-					break;
-				case 1:
-					isTmall = true;
-					break;
-				default:
-					break;
+					case 0:
+						isTmall = false;
+						break;
+					case 1:
+						isTmall = true;
+						break;
+					default:
+						break;
 				}
 			}
 
@@ -82,16 +82,16 @@ public class MainActivity extends Activity
 
 	public void start()
 	{
-		//Æ´×°Ä¿±êÇëÇóÊı¾İ
+		//æ‹¼è£…ç›®æ ‡è¯·æ±‚æ•°æ®
 		keywordStr = keywordEt.getText().toString();
 		titleStr = titleEt.getText().toString();
-		
+
 		WA_Parameters parameter = new WA_Parameters();
 		parameter.setKeywordStr(keywordStr);
 		parameter.setTitleStr(titleStr);
 		parameter.setIsTMall(isTmall);
 
-		//¿ªÆôÖ´ĞĞ×Ô¶¯»¯µÄFragmentÒ³Ãæ
+		//å¼€å¯æ‰§è¡Œè‡ªåŠ¨åŒ–çš„Fragmenté¡µé¢
 		WA_MainFragment.start(MainActivity.this,R.id.container, parameter);
 	}
 

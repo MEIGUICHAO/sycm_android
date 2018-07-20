@@ -280,8 +280,8 @@ public class WA_YundaFragment extends WA_BaseFragment
 	{
 		// 拼接业务逻辑
 		String logicStr = "var currentPage=doGetTextByCNByInner(\"currentPage\");" + "var totalSize=getSize(\"list-item\");"
-		// +"localMethod.JI_showToast(totalSize);"
-		// + "localMethod.JI_showToast(currentPage);"
+				// +"localMethod.JI_showToast(totalSize);"
+				// + "localMethod.JI_showToast(currentPage);"
 				+ "doTapForScanGoodsByTitle(\"list-item\",\"d-title\",\"" + titleStr + "\",currentPage,totalSize);";
 
 		String completeJs = doAutoTest(logicStr);

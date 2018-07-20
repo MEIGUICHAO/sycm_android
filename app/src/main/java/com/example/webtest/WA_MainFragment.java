@@ -244,7 +244,7 @@ public class WA_MainFragment extends WA_YundaFragment
 //					{
 //						setPswName();
 //						doSleep(2);
-						// step1：点击搜索框进行商品搜索##########################（Page1-首页）
+		// step1：点击搜索框进行商品搜索##########################（Page1-首页）
 //						doEnterSearchPage();
 ////						doSleep(2);
 ////

@@ -23,20 +23,20 @@ public class WA_BaseFragment extends Fragment
 {
 	private static final String LOG_FILE_PATH = Environment.getExternalStorageDirectory().getPath() + "/web_auto.log";
 
-	/** 注入需自动执行的JS代码 */
+	/** 娉ㄥ叆闇�鑷姩鎵ц鐨凧S浠ｇ爜 */
 	protected String doAutoTest(String code)
 	{
 		return "function doAutoTest() { " + code + "}";
 	}
 
-	/** 组装整个JS代码 */
+	/** 缁勮鏁翠釜JS浠ｇ爜 */
 	protected String buildTest(String logicStr)
 	{
 		String js = "var newscript = document.createElement(\"script\");" + "newscript.text = window.onload=doAutoTest();" + logicStr + "document.body.appendChild(newscript);";
 		return js;
 	}
 
-	/** Load JS代码，然后会自动执行doAutoTest()里的内容 */
+	/** Load JS浠ｇ爜锛岀劧鍚庝細鑷姩鎵цdoAutoTest()閲岀殑鍐呭 */
 	protected void loadUrl(WebView webView, String logicStr)
 	{
 		String js = buildTest(logicStr);
@@ -44,7 +44,7 @@ public class WA_BaseFragment extends Fragment
 		webView.loadUrl("javascript:" + js);
 	}
 
-	/** 注入本地文件中的JS方法 */
+	/** 娉ㄥ叆鏈湴鏂囦欢涓殑JS鏂规硶 */
 	protected String getJsFromFile(Activity mContext, String jsPath)
 	{
 		InputStream in = null;
@@ -77,7 +77,7 @@ public class WA_BaseFragment extends Fragment
 		return fromFile.toString();
 	}
 
-	/** 创建本地日志文件 */
+	/** 鍒涘缓鏈湴鏃ュ織鏂囦欢 */
 	protected void createLog(String infoStr)
 	{
 
@@ -104,7 +104,7 @@ public class WA_BaseFragment extends Fragment
 
 	}
 
-	/** 删除本地日志文件 */
+	/** 鍒犻櫎鏈湴鏃ュ織鏂囦欢 */
 	protected void deleteLog()
 	{
 		File file = new File(LOG_FILE_PATH);
@@ -117,7 +117,7 @@ public class WA_BaseFragment extends Fragment
 		}
 	}
 
-	/** 线程延时 */
+	/** 绾跨▼寤舵椂 */
 	protected void doSleep(int time)
 	{
 		try
@@ -129,7 +129,7 @@ public class WA_BaseFragment extends Fragment
 		}
 	}
 
-	/** 线程终止 */
+	/** 绾跨▼缁堟 */
 	protected void doInterreput()
 	{
 		Thread.interrupted();

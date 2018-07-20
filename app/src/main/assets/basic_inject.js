@@ -7,6 +7,22 @@ function setPswName(){
 
 }
 
+//标题组合
+function titleCombination(){
+    var as = document.getElementsByTagName("a");
+    findForClick(as,"关联修饰词");
+    getTableTitleData();
+    setTimeout(function(){
+        findForClick(as,"关联热词");
+        getTableTitleData();
+    },2000);
+    setTimeout(function(){
+        localMethod.getTitleResult();
+    },3000);
+//    localMethod.getTitleResult();
+
+}
+
 //跳到市场
 function goSearchClick(){
 
@@ -86,11 +102,10 @@ function findForClick(as,word){
 
 //竞争力、热词获取排序
 function goGetChecked(){
-    var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
 
     for(var j=0;j<5;j++){
         setTimeout(function(){
-            getTableData(table);
+            getTableData();
             var as = document.getElementsByTagName("a");
             findForClick(as,"下一页 >");
         },500*(j+1));
@@ -102,7 +117,29 @@ function goGetChecked(){
 }
 
 
-function getTableData(table){
+function getTableTitleData(){
+    var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
+    for(var i=0;i<table.rows.length;i++){
+        var child = table.getElementsByTagName("tr")[i];
+        var text = child.children[0].innerText;
+        var text1 = child.children[1].innerText;
+        if(i>0){
+            text1 = text1.replace("-","0");
+
+            text1 = text1.replace(",","").replace(",","");
+            localMethod.JI_LOG(text+"~~~~~~~~~~");
+            localMethod.JI_LOG(text1+"!!!!!!!!");
+            if(text1>1000){
+                localMethod.titleResult(text,text1);
+            }
+
+
+        }
+    }
+}
+
+function getTableData(){
+    var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
     for(var i=0;i<table.rows.length;i++){
         var child = table.getElementsByTagName("tr")[i];
         var text = child.children[0].innerText;

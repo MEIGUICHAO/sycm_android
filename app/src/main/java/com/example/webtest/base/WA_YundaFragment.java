@@ -36,6 +36,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	protected Instrumentation instrumentation;
 	private HashMap<String, Float> jzlMap;
 	private HashMap<String, Float> rcMap;
+	private HashMap<String, Float> titleMap;
 
 	protected enum SearchType
 	{
@@ -51,7 +52,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	}
 	protected void goSearchWord() {
 
-		handlerJs("operaSearch();");
+		handlerJs("titleCombination();");
 	}
 	protected void goGetChecked() {
 
@@ -367,6 +368,20 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 
 		@JavascriptInterface
+		public void titleResult(String name,String count)
+		{
+
+			if (null == titleMap) {
+				titleMap = new HashMap<String, Float>();
+			}
+
+			if (getWordCount(name)>1){
+				titleMap.put(name,Float.parseFloat(count));
+			}
+
+		}
+
+		@JavascriptInterface
 		public void shopResult(String name,String jzl,String rc)
 		{
 
@@ -390,6 +405,15 @@ public class WA_YundaFragment extends WA_BaseFragment
 			Log.e(TAG, "*************************************************");
 			sortMap(rcMap,"---------------------rc---------------------------"+"\n");
 			mapClear();
+
+		}
+
+		@JavascriptInterface
+		public void getTitleResult()
+		{
+			Log.e(TAG, "--------------------title----------------------------");
+			sortMap(titleMap,"---------------------title---------------------------"+"\n");
+			titleMap.clear();
 
 		}
 
@@ -454,6 +478,22 @@ public class WA_YundaFragment extends WA_BaseFragment
 			LogUtil.e("------------getTargetIndex------------");
 			handlerJs("operaSearch();");
 		}
+	}
+
+	public int getWordCount(String s)
+	{
+		int length = 0;
+		for(int i = 0; i < s.length(); i++)
+		{
+			int ascii = Character.codePointAt(s, i);
+			if(ascii >= 0 && ascii <=255)
+				length++;
+			else
+				length += 2;
+
+		}
+		return length;
+
 	}
 
 	private void sortMap(Map map,String str) {

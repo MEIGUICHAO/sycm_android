@@ -42,12 +42,68 @@ function setSearchWord(shopword){
 }
 
 function goGetChecked(){
-    var nums = document.getElementsByClassName("num");
-    for(var i = 0;i<num.length;i++){
-        localMethod.JI_LOG(nums.value+"-----------"+i);
+    var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
+    for(var i=0;i<table.rows.length;i++){
+        var child = table.getElementsByTagName("tr")[i];
+        var text = child.children[0].innerText;
+        var text1 = child.children[1].innerText;
+        var text2 = child.children[2].innerText;
+        var text3 = child.children[3].innerText;
+        var text4 = child.children[4].innerText;
+        if(i>0){
+            var djl = text2.replace("%","");
+            djl= djl/100;
+            var zhl = text4.replace("%","");
+            zhl= zhl/100;
+            text1 = text1.replace(",","");
+            text3 = text3.replace(",","");
+            localMethod.JI_LOG(text1+"!!!!!!!!");
+            localMethod.JI_LOG(djl+"!!!!!!!!");
+            var jzl = ccDiv(accMul(accMul(text1,djl),zhl),text3)£»
+            var rc = ccDiv(text1,text3);
+            localMethod.JI_LOG(jzl+"~~~~~");
+            localMethod.shopResult(text,jzl,rc);
+
+        }
+
+//        localMethod.JI_LOG(text1+"!!!!!!!!");
+//        localMethod.JI_LOG(text2+"!!!!!!!!");
+//        localMethod.JI_LOG(text3+"!!!!!!!!");
+//        localMethod.JI_LOG(text4+"!!!!!!!!");
     }
+    localMethod.getHotShopResult();
+
 
 }
+
+//³Ë·¨
+function accMul(arg1,arg2){
+    var m=0,s1=arg1.toString(),s2=arg2.toString();
+    try{
+        m+=s1.split(".")[1].length
+        }catch(e){}
+    try{
+        m+=s2.split(".")[1].length
+        }catch(e){}
+    return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m);
+}
+
+//³ý·¨
+ function accDiv(arg1,arg2){
+      var t1=0,t2=0,r1,r2;
+    try{
+        t1=arg1.toString().split(".")[1].length
+        }catch(e){}
+    try{
+        t2=arg2.toString().split(".")[1].length
+        }catch(e){}
+    with(Math){
+        r1=Number(arg1.toString().replace(".",""));
+        r2=Number(arg2.toString().replace(".",""));
+        return (r1/r2)*pow(10,t2-t1);
+    }
+}
+
 
 function operaSearch(){
     var optionsUnselected = document.getElementsByClassName("option");

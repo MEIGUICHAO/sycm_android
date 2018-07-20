@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.webtest.io.WA_Parameters;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import static android.content.ContentValues.TAG;
 
@@ -27,6 +28,8 @@ public class WA_YundaFragment extends WA_BaseFragment
 	protected MyWebView listWeb;
 	protected WebView detailWeb;
 	protected Instrumentation instrumentation;
+	private HashMap<String, Float> jzlMap;
+	private HashMap<String, Float> rcMap;
 
 	protected enum SearchType
 	{
@@ -348,6 +351,29 @@ public class WA_YundaFragment extends WA_BaseFragment
 //			InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
 //			imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
 			showGuide();
+
+		}
+
+
+		@JavascriptInterface
+		public void shopResult(String name,String jzl,String rc)
+		{
+
+			if (null == jzlMap) {
+				jzlMap = new HashMap<String, Float>();
+			}
+			if (null == rcMap) {
+				rcMap = new HashMap<String, Float>();
+			}
+			jzlMap.put(name, Float.parseFloat(jzl));
+			rcMap.put(name, Float.parseFloat(rc));
+
+		}
+
+
+		@JavascriptInterface
+		public void getHotShopResult()
+		{
 
 		}
 

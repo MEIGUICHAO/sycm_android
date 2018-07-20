@@ -1,8 +1,8 @@
-/** ×¢£º¸ÃJSÎÄ¼şÓÃÓÚ´æ·Å³£ÓÃº¯Êı£¬¹¦ÓÃÏà¹ØµÄº¯Êı·ÅÔÚJavaÎÄ¼şÖĞ×¢Èë*/
+/** æ³¨ï¼šè¯¥JSæ–‡ä»¶ç”¨äºå­˜æ”¾å¸¸ç”¨å‡½æ•°ï¼ŒåŠŸç”¨ç›¸å…³çš„å‡½æ•°æ”¾åœ¨Javaæ–‡ä»¶ä¸­æ³¨å…¥*/
 
 
 //##############################################################################################################
-//ÉèÖÃÕËºÅÃÜÂë
+//è®¾ç½®è´¦å·å¯†ç 
 function setPswName(){
 
 }
@@ -55,13 +55,20 @@ function goGetChecked(){
             djl= djl/100;
             var zhl = text4.replace("%","");
             zhl= zhl/100;
-            text1 = text1.replace(",","");
-            text3 = text3.replace(",","");
+            text1 = text1.replace("-","0");
+            text2 = text2.replace("-","0");
+            text3 = text3.replace("-","0");
+            text4 = text4.replace("-","0");
+
+            text1 = text1.replace(",","").replace(",","");
+            text3 = text3.replace(",","").replace(",","");
             localMethod.JI_LOG(text1+"!!!!!!!!");
-            localMethod.JI_LOG(djl+"!!!!!!!!");
-            var jzl = ccDiv(accMul(accMul(text1,djl),zhl),text3)£»
-            var rc = ccDiv(text1,text3);
+            localMethod.JI_LOG(text3+"!!!!!!!!");
+            var jzl = accDiv(accMul(accMul(text1,djl),zhl),text3);
+            var rc = accDiv(text1,text3);
             localMethod.JI_LOG(jzl+"~~~~~");
+            localMethod.JI_LOG(rc+"~~~~~");
+//            localMethod.JI_LOG(jzl+"~~~~~");
             localMethod.shopResult(text,jzl,rc);
 
         }
@@ -72,12 +79,14 @@ function goGetChecked(){
 //        localMethod.JI_LOG(text4+"!!!!!!!!");
     }
     localMethod.getHotShopResult();
+//    localMethod.mapClear();
 
 
 }
 
-//³Ë·¨
+//ä¹˜æ³•
 function accMul(arg1,arg2){
+ try{
     var m=0,s1=arg1.toString(),s2=arg2.toString();
     try{
         m+=s1.split(".")[1].length
@@ -86,11 +95,15 @@ function accMul(arg1,arg2){
         m+=s2.split(".")[1].length
         }catch(e){}
     return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m);
+ }catch(e){
+    return 0;
+ }
 }
 
-//³ı·¨
+//é™¤æ³•
  function accDiv(arg1,arg2){
-      var t1=0,t2=0,r1,r2;
+ try{
+    var t1=0,t2=0,r1,r2;
     try{
         t1=arg1.toString().split(".")[1].length
         }catch(e){}
@@ -102,8 +115,10 @@ function accMul(arg1,arg2){
         r2=Number(arg2.toString().replace(".",""));
         return (r1/r2)*pow(10,t2-t1);
     }
+ }catch(e){
+    return 0;
+ }
 }
-
 
 function operaSearch(){
     var optionsUnselected = document.getElementsByClassName("option");
@@ -137,8 +152,8 @@ function foreachThings(options,i){
 }
 
 
-/** No.1 Ä£Äâµã»÷ÊÂ¼ş############################################################################################*/
-//Ä£Äâµã»÷ÊÂ¼ş
+/** No.1 æ¨¡æ‹Ÿç‚¹å‡»äº‹ä»¶############################################################################################*/
+//æ¨¡æ‹Ÿç‚¹å‡»äº‹ä»¶
 function doClickByRI(resId,time) {
  var btn = document.getElementById(resId);
  if(null!=btn){
@@ -150,7 +165,7 @@ function doClickByRI(resId,time) {
 
 function doClickByTag(){
   var itemli = document.getElementsByTagName("li");
-  localMethod.JI_showToast("length£º"+itemli.length);
+  localMethod.JI_showToast("lengthï¼š"+itemli.length);
 
 }
 function doComfir(){
@@ -187,7 +202,7 @@ function selectNumRange(position,amount){
 
 function doClickByCN(className,time) {
   var itemli = document.getElementsByTagName("li");
-  localMethod.JI_showToast("length£º"+itemli.length);
+  localMethod.JI_showToast("lengthï¼š"+itemli.length);
 
   var btn = document.getElementsByClassName(className)[0];
   if(null!=btn){
@@ -197,7 +212,7 @@ function doClickByCN(className,time) {
     }
 }
 
-//Ä£Äâ´¥ÃşÊÂ¼ş
+//æ¨¡æ‹Ÿè§¦æ‘¸äº‹ä»¶
 function doTapByRI(resId,index) {
    if(null==index){index=0;}
    $("#"+resId).eq(index).trigger("tap");
@@ -208,7 +223,7 @@ function doTapByCN(className,index) {
   $("."+className).eq(index).trigger("tap")
 }
 
-//¸ù¾İ¸¸¿Ø¼ş²éÕÒ×Ó¿Ø¼şÔÙ´¥Ãş
+//æ ¹æ®çˆ¶æ§ä»¶æŸ¥æ‰¾å­æ§ä»¶å†è§¦æ‘¸
 function doTapByParentCN(parentCN,className,index) {
   if(null==index){index=0;}
   $("."+parentCN).children("."+className) .eq(index).trigger("tap");
@@ -220,7 +235,7 @@ function doTapForScanGoods(parentCN,index) {
 }
 
 
-/** No.2 ÊäÈëÎÄ±¾ĞÅÏ¢ÖÁÊäÈë¿òÖĞ############################################################################################*/
+/** No.2 è¾“å…¥æ–‡æœ¬ä¿¡æ¯è‡³è¾“å…¥æ¡†ä¸­############################################################################################*/
 function doInputByRI(resId,context,time) {
    var text = document.getElementById(resId);
     setTimeout(function(){
@@ -236,7 +251,7 @@ function doInputByCN(className,context,time) {
 }
 
 
-/** No.3 »ñÈ¡¿Ø¼şµÄÎÄ±¾ĞÅÏ¢###########################################################################################*/
+/** No.3 è·å–æ§ä»¶çš„æ–‡æœ¬ä¿¡æ¯###########################################################################################*/
 function doGetTextByRI(resId) {
     var text = document.getElementById(resId);
     return text.value;

@@ -1,9 +1,9 @@
-var isTargetSearched = false;  //ÅĞ¶ÏÄ¿µÄÉÌÆÌÊÇ·ñä¯ÀÀÍê³É
-var restScanCount = getRandomNum(2, 8);  //µÃµ½Ä¿µÄÉÌÆÌä¯ÀÀÍê³Éºó»¹Ğèä¯ÀÀÉÌÆÌÊıÁ¿µÄËæ»úÊı
+var isTargetSearched = false;  //åˆ¤æ–­ç›®çš„å•†é“ºæ˜¯å¦æµè§ˆå®Œæˆ
+var restScanCount = getRandomNum(2, 8);  //å¾—åˆ°ç›®çš„å•†é“ºæµè§ˆå®Œæˆåè¿˜éœ€æµè§ˆå•†é“ºæ•°é‡çš„éšæœºæ•°
 
 /**
- *  Í¨¹ıÉÌÆ·±êÌâ²éÕÒÄ¿µÄÉÌÆÌ£¬Èôµ±Ç°Ò³Ã»ÓĞÕÒµ½ÔòËæ»úä¯ÀÀ0-2¸öÉÌÆÌ£¬ä¯ÀÀÍêºó·­Ò³ÔÙ²éÕÒÄ¿µÄÉÌÆÌ£¬ÒÀ´ÎÑ­»·
- *  µ±ÕÒµ½Ä¿µÄÉÌÆÌ²¢ä¯ÀÀÍê³ÉºóÔÙËæ»úä¯ÀÀ2-8¼äÉÌÆÌ
+ *  é€šè¿‡å•†å“æ ‡é¢˜æŸ¥æ‰¾ç›®çš„å•†é“ºï¼Œè‹¥å½“å‰é¡µæ²¡æœ‰æ‰¾åˆ°åˆ™éšæœºæµè§ˆ0-2ä¸ªå•†é“ºï¼Œæµè§ˆå®Œåç¿»é¡µå†æŸ¥æ‰¾ç›®çš„å•†é“ºï¼Œä¾æ¬¡å¾ªç¯
+ *  å½“æ‰¾åˆ°ç›®çš„å•†é“ºå¹¶æµè§ˆå®Œæˆåå†éšæœºæµè§ˆ2-8é—´å•†é“º
  */
 function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
     var frontSize = 0;
@@ -21,7 +21,7 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
     for (var i = frontSize; i < backSize; i++) {
         var titelTv = document.getElementsByClassName(className)[i];
         if (null == titelTv) {
-            localMethod.JI_showToast("Êı×éÔ½½ç£¡£¡");
+            localMethod.JI_showToast("æ•°ç»„è¶Šç•Œï¼ï¼");
             return;
         }
         titelTxt = titelTv.innerHTML;
@@ -29,12 +29,12 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
         if (!isTargetSearched && titelTxt.indexOf(titleStr) >= 0) {
             isTargetSearched = true;
 
-            // detailWebViewÖ´ĞĞÉÌÆ·ÏêÇéÒ³Ãæä¯ÀÀÈÎÎñ
+            // detailWebViewæ‰§è¡Œå•†å“è¯¦æƒ…é¡µé¢æµè§ˆä»»åŠ¡
             var url = getUrlFromHref(parentCN, i);
             localMethod.JI_doEnterShop(url);
             //localMethod.JI_createLog("Page" + page + "####" + titelTxt);
 
-            // listWebViewÖ´ĞĞ·­Ò³Ë¢ĞÂÉÌÆ·list±íÈÎÎñ
+            // listWebViewæ‰§è¡Œç¿»é¡µåˆ·æ–°å•†å“listè¡¨ä»»åŠ¡
             localMethod.JI_doGetNextPage(20);
             return;
         } else {
@@ -42,7 +42,7 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
         }
     }
 
-    // µ±ÕÒµ½Ä¿µÄÉÌÆÌ²¢ä¯ÀÀÍê³ÉºóÔÙËæ»úä¯ÀÀ¼¸¼äÉÌÆÌ
+    // å½“æ‰¾åˆ°ç›®çš„å•†é“ºå¹¶æµè§ˆå®Œæˆåå†éšæœºæµè§ˆå‡ é—´å•†é“º
     if (isTargetSearched) {
         if (0 != restScanCount) {
             restScanCount--;
@@ -52,7 +52,7 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
         }
     }
 
-    // µ±Ç°Ò³ÃæÉÌÆÌä¯ÀÀËæ»ú¡¢ä¯ÀÀÊ±³¤Ëæ»úÂß¼­
+    // å½“å‰é¡µé¢å•†é“ºæµè§ˆéšæœºã€æµè§ˆæ—¶é•¿éšæœºé€»è¾‘
     if (backSize - frontSize == count) {
 
         var randomTime = getRandomNum(1, 20);
@@ -77,7 +77,7 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
 
 }
 
-///** */ 
+///** */
 //function doTapForScanOtherGoods(parentCN, randomIndex) {
 //    //localMethod.JI_showToast(index);
 //    $("." + parentCN).eq(randomIndex).children(".p").children("a").trigger("tap");
@@ -85,18 +85,18 @@ function doTapForScanGoodsByTitle(parentCN, className, titleStr, page, size) {
 //    localMethod.JI_doScanOtherGoods();
 //}
 
-/** µÃµ½Ö¸¶¨indexµÄURL*/
+/** å¾—åˆ°æŒ‡å®šindexçš„URL*/
 function getUrlFromHref(parentCN, index) {
     return $("." + parentCN).eq(index).children(".p").children("a").attr("href");
 }
 
-/** µÃµ½Ö¸¶¨TAGµÄÊıÁ¿£¬ÓÃ×÷»ñÈ¡listµÄÊıÁ¿*/
+/** å¾—åˆ°æŒ‡å®šTAGçš„æ•°é‡ï¼Œç”¨ä½œè·å–listçš„æ•°é‡*/
 function getSize(className) {
     var text = document.getElementsByClassName(className).length;
     return text;
 }
 
-/** µÃµ½Ö¸¶¨·¶Î§µÄËæ»úÊı*/
+/** å¾—åˆ°æŒ‡å®šèŒƒå›´çš„éšæœºæ•°*/
 function getRandomNum(Min,Max)
 {   
    var Range = Max - Min;   

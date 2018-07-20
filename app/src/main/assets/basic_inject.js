@@ -7,17 +7,20 @@ function setPswName(){
 
 }
 
+//跳到市场
 function goSearchClick(){
 
     var as = document.getElementsByTagName("a");
-    for (var i = 0; i < as.length; i++) {
-        localMethod.JI_LOG(as[i].innerHTML+"~~~~"+i);
-    }
+//    for (var i = 0; i < as.length; i++) {
+//        localMethod.JI_LOG(as[i].innerHTML+"~~~~"+i);
+//    }
     as[18].click();
 
     setTimeout(function(){
-            goSearchWord();
-    },5000);
+                var as2 = document.getElementsByTagName("a");
+                as2[27].click();
+                localMethod.JI_LOG("as2~~~~click");
+    },3000);
 
 }
 
@@ -64,11 +67,21 @@ function setSearchWord(shopword){
     localMethod.showKeyboard();
     searchWord[0].value = shopword;
     setTimeout(function(){
-            as[31].click();
-            operaSearch();
+            findForClick(as,"搜索");
+            var as2 = document.getElementsByTagName("a");
+            findForClick(as2,"相关搜索词");
     },2000);
-
 }
+
+//根据搜索词点击
+function findForClick(as,word){
+    for(var i=0;i<as.length;i++){
+        if(as[i].innerText==word){
+           as[i].click();
+        }
+    }
+}
+
 
 function goGetChecked(){
     var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];

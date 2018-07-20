@@ -46,7 +46,8 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 	protected void goSearchClick() {
 
-		handlerJs("goSearchClick();");
+		listWeb.loadUrl("https://sycm.taobao.com/mq/words/search_words.htm");
+//		handlerJs("goSearchClick();");
 	}
 	protected void goSearchWord() {
 

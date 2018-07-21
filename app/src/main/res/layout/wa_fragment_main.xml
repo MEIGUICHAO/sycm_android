@@ -14,12 +14,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="刷新" />
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="返回" />
+
         <Button
             android:id="@+id/btn_gosearch"
             android:layout_weight="1"
@@ -34,11 +29,18 @@
             android:layout_height="wrap_content"
             android:text="检测" />
         <Button
+            android:id="@+id/btn_biao1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="标1" />
+
+        <Button
             android:id="@+id/btn_gosearchworld"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="标题" />
+            android:text="标2" />
         <Button
             android:id="@+id/btn_search"
             android:layout_weight="1"
@@ -79,6 +81,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="go" />
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="返回" />
+
 
     </LinearLayout>
 

@@ -9,16 +9,37 @@ function setPswName(){
 
 //标题组合
 function titleCombination(){
+
     var as = document.getElementsByTagName("a");
     findForClick(as,"关联修饰词");
-    getTableTitleData();
-    setTimeout(function(){
-        findForClick(as,"关联热词");
+    for(var j=0;j<5;j++){
+        setTimeout(function(){
         getTableTitleData();
-    },2000);
+            var as = document.getElementsByTagName("a");
+            findForClick(as,"下一页 >");
+        },500*(j+1));
+    }
+
     setTimeout(function(){
         localMethod.getTitleResult();
     },3000);
+//    localMethod.getTitleResult();
+
+}
+
+//标题组合
+function relativeTitle(){
+
+    var as = document.getElementsByTagName("a");
+    findForClick(as,"关联热词");
+    for(var j=0;j<5;j++){
+        setTimeout(function(){
+        getTableTitleData();
+            var as = document.getElementsByTagName("a");
+            findForClick(as,"下一页 >");
+        },500*(j+1));
+    }
+
 //    localMethod.getTitleResult();
 
 }
@@ -118,7 +139,9 @@ function goGetChecked(){
 
 
 function getTableTitleData(){
+                localMethod.JI_LOG("!!!!!!!!table");
     var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
+                localMethod.JI_LOG(table.rows.length+"!!!!!!!!table.rows.length");
     for(var i=0;i<table.rows.length;i++){
         var child = table.getElementsByTagName("tr")[i];
         var text = child.children[0].innerText;
@@ -129,7 +152,7 @@ function getTableTitleData(){
             text1 = text1.replace(",","").replace(",","");
             localMethod.JI_LOG(text+"~~~~~~~~~~");
             localMethod.JI_LOG(text1+"!!!!!!!!");
-            if(text1>1000){
+            if(text1>10){
                 localMethod.titleResult(text,text1);
             }
 

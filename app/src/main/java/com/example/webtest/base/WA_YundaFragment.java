@@ -54,6 +54,10 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 		handlerJs("titleCombination();");
 	}
+	protected void biao1() {
+
+		handlerJs("relativeTitle();");
+	}
 	protected void goGetChecked() {
 
 		handlerJs("goGetChecked();");

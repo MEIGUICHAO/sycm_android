@@ -39,7 +39,7 @@ public class WA_MainFragment extends WA_YundaFragment
 	private Button btnSearch;
 	private Button btnGosearch;
 	private Button btnGosearchworld;
-	private Button btnGetchecked,btn_check;
+	private Button btnGetchecked,btn_check,btn_biao1;
 
 	/**  通过静态方法实例化自动化Fragment*/
 	public static void start(Activity mContext, int containerRsID, WA_Parameters parameter)
@@ -90,6 +90,7 @@ public class WA_MainFragment extends WA_YundaFragment
 		btnGosearchworld = (Button) view.findViewById(R.id.btn_gosearchworld);
 		btnGetchecked = (Button) view.findViewById(R.id.btn_getchecked);
 		btn_check = (Button) view.findViewById(R.id.btn_check);
+		btn_biao1 = (Button) view.findViewById(R.id.btn_biao1);
 	}
 
 	/** 初始化两个不同功用的WebView */
@@ -237,6 +238,12 @@ public class WA_MainFragment extends WA_YundaFragment
 			@Override
 			public void onClick(View view) {
 				check();
+			}
+		});
+		btn_biao1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				biao1();
 			}
 		});
 //		startBtn.setOnClickListener(new View.OnClickListener()

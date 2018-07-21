@@ -55,7 +55,6 @@ public class WA_YundaFragment extends WA_BaseFragment
 		handlerJs("titleCombination();");
 	}
 	protected void biao1() {
-
 		handlerJs("relativeTitle();");
 	}
 	protected void goGetChecked() {
@@ -379,7 +378,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 				titleMap = new HashMap<String, Float>();
 			}
 
-			if (getWordCount(name)>1){
+			if (getWordCount(name)>2){
 				titleMap.put(name,Float.parseFloat(count));
 			}
 

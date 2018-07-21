@@ -40,6 +40,10 @@ function relativeTitle(){
         },500*(j+1));
     }
 
+       setTimeout(function(){
+            titleCombination();
+        },3000);
+
 //    localMethod.getTitleResult();
 
 }
@@ -139,9 +143,7 @@ function goGetChecked(){
 
 
 function getTableTitleData(){
-                localMethod.JI_LOG("!!!!!!!!table");
     var table = document.getElementsByClassName("table-ng table-ng-basic related-word-table")[0];
-                localMethod.JI_LOG(table.rows.length+"!!!!!!!!table.rows.length");
     for(var i=0;i<table.rows.length;i++){
         var child = table.getElementsByTagName("tr")[i];
         var text = child.children[0].innerText;
@@ -150,9 +152,9 @@ function getTableTitleData(){
             text1 = text1.replace("-","0");
 
             text1 = text1.replace(",","").replace(",","");
-            localMethod.JI_LOG(text+"~~~~~~~~~~");
-            localMethod.JI_LOG(text1+"!!!!!!!!");
-            if(text1>10){
+//            localMethod.JI_LOG(text+"~~~~~~~~~~");
+//            localMethod.JI_LOG(text1+"!!!!!!!!");
+            if(text1>700){
                 localMethod.titleResult(text,text1);
             }
 
@@ -182,13 +184,13 @@ function getTableData(){
 
             text1 = text1.replace(",","").replace(",","");
             text3 = text3.replace(",","").replace(",","");
-            localMethod.JI_LOG(text1+"!!!!!!!!");
-            localMethod.JI_LOG(text3+"!!!!!!!!");
+//            localMethod.JI_LOG(text1+"!!!!!!!!");
+//            localMethod.JI_LOG(text3+"!!!!!!!!");
             if(text3!=("0")&&text1>2000){
                 var jzl = accDiv(accMul(accMul(text1,djl),zhl),text3);
                 var rc = accDiv(text1,text3);
-                localMethod.JI_LOG(jzl+"~~~~~");
-                localMethod.JI_LOG(rc+"~~~~~");
+//                localMethod.JI_LOG(jzl+"~~~~~");
+//                localMethod.JI_LOG(rc+"~~~~~");
                 localMethod.shopResult(text,jzl,rc);
             }
 

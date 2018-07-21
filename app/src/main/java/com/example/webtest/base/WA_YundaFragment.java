@@ -43,7 +43,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 		All, Shop, Mall
 	}
 
-	private Handler handler = new Handler();
+	public Handler handler = new Handler();
 
 	protected void goSearchClick() {
 
@@ -56,7 +56,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	}
 	public void biao1() {
 		listWeb.reload();
-		handlerJs("relativeTitle();",3000);
+		handlerJs("relativeTitle();",5000);
 //		handlerJs("relativeTitle();");
 	}
 	protected void goGetChecked() {
@@ -83,7 +83,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 		});
 	}
 
-	private void handlerJs(final String strlogic,long time) {
+	public void handlerJs(final String strlogic,long time) {
 		handler.postDelayed(new Runnable() {
 			@Override
 			public void run() {
@@ -421,7 +421,15 @@ public class WA_YundaFragment extends WA_BaseFragment
 			Log.e(TAG, "*************************************************");
 			sortMap(rcMap,"---------------------rc---------------------------"+"\n");
 			mapClear();
-			biao1();
+
+			handler.postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					biao1();
+				}
+			},3000);
+//			listWeb.reload();
+//			handlerJs("relativeTitle();",3000);
 
 		}
 

@@ -54,8 +54,10 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 		handlerJs("titleCombination();");
 	}
-	protected void biao1() {
-		handlerJs("relativeTitle();");
+	public void biao1() {
+		listWeb.reload();
+		handlerJs("relativeTitle();",3000);
+//		handlerJs("relativeTitle();");
 	}
 	protected void goGetChecked() {
 
@@ -79,6 +81,17 @@ public class WA_YundaFragment extends WA_BaseFragment
 				loadUrl(listWeb, completeJs);
 			}
 		});
+	}
+
+	private void handlerJs(final String strlogic,long time) {
+		handler.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				String logicStr = strlogic;
+				String completeJs = doAutoTest(logicStr);
+				loadUrl(listWeb, completeJs);
+			}
+		},time);
 	}
 
 	/** Function：选择商品所在的商铺类型(天猫或淘宝) */
@@ -408,6 +421,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 			Log.e(TAG, "*************************************************");
 			sortMap(rcMap,"---------------------rc---------------------------"+"\n");
 			mapClear();
+			biao1();
 
 		}
 

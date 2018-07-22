@@ -3,21 +3,27 @@
     <string-array name="classify">
         <item>休闲玩具</item>
         <item>球类玩具</item>
-        <item>飞盘飞碟竹蜻蜓</item>
+        <item>飞盘</item>
+        <item>飞碟</item>
+        <item>竹蜻蜓</item>
         <item>儿童帐篷游戏屋</item>
+        <item>儿童游戏屋</item>
         <item>摇马</item>
-        <item>拳击袋拳击手套</item>
+        <item>儿童拳击袋</item>
+        <item>儿童拳击手套</item>
         <item>吹泡泡</item>
         <item>跳绳</item>
-        <item>跳跳玩具跳跃类运动</item>
-        <item>飞镖射击射箭类</item>
+        <item>跳跳玩具</item>
+        <item>儿童玩具飞镖</item>
+        <item>儿童玩具射击射箭</item>
         <item>海洋球波波球</item>
         <item>陀螺</item>
         <item>风车</item>
         <item>投掷套圈</item>
         <item>呼啦圈</item>
         <item>沙包</item>
-        <item>宝宝纪念品个性产品</item>
+        <item>宝宝纪念品</item>
+        <item>宝宝个性产品</item>
         <item>手脚印</item>
         <item>纪念册</item>
         <item>胎毛笔</item>
@@ -31,7 +37,6 @@
         <item>手镯</item>
         <item>宝宝饰品套装</item>
         <item>台历</item>
-        <item>电动遥控惯性发条玩具</item>
         <item>电动遥控机器人</item>
         <item>发条玩具</item>
         <item>电动遥控车</item>
@@ -40,7 +45,6 @@
         <item>电动遥控船类</item>
         <item>电动遥控动物人物</item>
         <item>惯性回力滑行玩具</item>
-        <item>其它</item>
         <item>儿童棋类桌面游戏</item>
         <item>强手棋大富翁棋</item>
         <item>飞行棋</item>
@@ -127,7 +131,6 @@
         <item>手工创意粘贴类</item>
         <item>手工折纸剪纸书</item>
         <item>白模填色模具彩绘</item>
-        <item>其他手工制作</item>
         <item>织布机手工编织刺绣类</item>
         <item>手工制作工具彩纸配件</item>
         <item>手工食品制作</item>
@@ -149,12 +152,10 @@
         <item>叠叠圈叠套玩具</item>
         <item>数字屋形状盒多孔认知玩具</item>
         <item>钓鱼类玩具</item>
-        <item>其他形状认知配对玩具</item>
         <item>婴儿手抓球</item>
         <item>建构拼插积木</item>
         <item>打地鼠敲击果虫</item>
         <item>螺母拆装组合玩具</item>
-        <item>敲打台其他敲打玩具</item>
         <item>婴幼儿串珠绕珠</item>
         <item>形状配对扭扭蛋</item>
         <item>螺丝形状配对玩具</item>
@@ -162,7 +163,6 @@
         <item>插珠蘑菇插钉</item>
         <item>游乐教学设备大型设施</item>
         <item>大型组合式游乐设备</item>
-        <item>其他游乐设施</item>
         <item>蹦床</item>
         <item>摇摆机摇摇乐</item>
         <item>游艺机</item>
@@ -181,7 +181,6 @@
         <item>发牌机</item>
         <item>乒乓球台</item>
         <item>音乐玩具儿童乐器</item>
-        <item>其他音乐玩具儿童乐器</item>
         <item>八音盒音乐盒</item>
         <item>电子琴玩具儿童电子琴</item>
         <item>音乐电话</item>
@@ -207,7 +206,7 @@
         <item>拨浪鼓</item>
         <item>电子发光充气整蛊玩具</item>
         <item>发光玩具</item>
-        <item>塑料充气玩具（其他材质勿放）</item>
+        <item>塑料充气玩具</item>
         <item>创意整蛊玩具</item>
         <item>电子玩具</item>
         <item>油动电动模型</item>
@@ -217,7 +216,6 @@
         <item>直升机</item>
         <item>船模</item>
         <item>静态模型</item>
-        <item>其他模型玩具</item>
         <item>建筑DIY小屋拼装模型</item>
         <item>家居生活场景</item>
         <item>车模</item>
@@ -229,14 +227,12 @@
         <item>木偶关节木偶</item>
         <item>儿童机器人变形人偶玩具</item>
         <item>奥特曼玩具专区</item>
-        <item>其他人偶玩具</item>
         <item>儿童机器人变形玩具</item>
         <item>儿童玩具枪</item>
         <item>电动玩具枪</item>
         <item>软弹枪</item>
         <item>水弹枪</item>
         <item>水枪</item>
-        <item>其他玩具枪</item>
         <item>绘画类用品</item>
         <item>颜料</item>
         <item>画笔画刷</item>

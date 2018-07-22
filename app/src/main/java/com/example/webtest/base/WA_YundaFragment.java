@@ -41,6 +41,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	private HashMap<String, Float> titleMap;
 	protected String[] shops;
 	protected int index = 0;
+	protected int randomtime = 1000;
 
 	protected enum SearchType
 	{
@@ -60,7 +61,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	}
 	public void biao1() {
 		listWeb.reload();
-		handlerJs("relativeTitle();",5000);
+		handlerJs("relativeTitle();",3000+randomtime);
 //		handlerJs("relativeTitle();");
 	}
 	protected void goGetChecked() {
@@ -72,7 +73,8 @@ public class WA_YundaFragment extends WA_BaseFragment
 		handlerJs("check();");
 	}
 
-	protected void goSearch(final String search) {
+	protected void goSearch(final String search,int randomtime) {
+//		handlerJs("setSearchWord(\""+search+"\",\""+randomtime+"\");");
 		handlerJs("setSearchWord(\"" + search + "\");");
 	}
 
@@ -431,7 +433,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 				public void run() {
 					biao1();
 				}
-			},3000);
+			},randomtime);
 //			listWeb.reload();
 //			handlerJs("relativeTitle();",3000);
 
@@ -441,11 +443,12 @@ public class WA_YundaFragment extends WA_BaseFragment
 		public void getTitleResult()
 		{
 			Log.e(TAG, "--------------------title----------------------------");
-			sortMap(titleMap,"---------------------title---------------------------"+"\n");
+			sortTitleMap(titleMap,"---------------------title---------------------------"+"\n");
 			titleMap.clear();
 			index++;
+			randomtime =3000+(int)(Math.random()*2000);		//返回大于等于m小于m+n（不包括m+n）之间的随机数
 			if (index<shops.length){
-				goSearch(shops[index]);
+				goSearch(shops[index],randomtime);
 			}
 
 		}
@@ -542,6 +545,23 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 		for(Map.Entry<String,Float> mapping:list){
 			str = str + mapping.getKey()+":"+mapping.getValue()+"\n";
+        }
+			Log.e("sortMap: ",str);
+	}
+
+	private void sortTitleMap(Map map,String str) {
+		List<Map.Entry<String,Float>> list = new ArrayList<Map.Entry<String,Float>>(map.entrySet());
+		Collections.sort(list,new Comparator<Map.Entry<String,Float>>() {
+            //升序排序
+            public int compare(Map.Entry<String, Float> o1,
+                               Map.Entry<String, Float> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+
+        });
+
+		for(Map.Entry<String,Float> mapping:list){
+			str = str + mapping.getKey()+"\n";
         }
 			Log.e("sortMap: ",str);
 	}

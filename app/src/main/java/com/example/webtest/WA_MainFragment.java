@@ -216,7 +216,7 @@ public class WA_MainFragment extends WA_YundaFragment
 		btnSearch.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				goSearch(shops[index]);
+				goSearch(shops[index],randomtime);
 			}
 		});
 		btnGosearch.setOnClickListener(new View.OnClickListener() {

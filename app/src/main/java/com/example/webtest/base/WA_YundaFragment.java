@@ -31,12 +31,16 @@ import static android.content.ContentValues.TAG;
 public class WA_YundaFragment extends WA_BaseFragment
 {
 
+
+
 	protected MyWebView listWeb;
 	protected WebView detailWeb;
 	protected Instrumentation instrumentation;
 	private HashMap<String, Float> jzlMap;
 	private HashMap<String, Float> rcMap;
 	private HashMap<String, Float> titleMap;
+	protected String[] shops;
+	protected int index = 0;
 
 	protected enum SearchType
 	{
@@ -69,7 +73,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 	}
 
 	protected void goSearch(final String search) {
-		handlerJs("setSearchWord(\"" + "烧烤" + "\");");
+		handlerJs("setSearchWord(\"" + search + "\");");
 	}
 
 	private void handlerJs(final String strlogic) {
@@ -439,6 +443,10 @@ public class WA_YundaFragment extends WA_BaseFragment
 			Log.e(TAG, "--------------------title----------------------------");
 			sortMap(titleMap,"---------------------title---------------------------"+"\n");
 			titleMap.clear();
+			index++;
+			if (index<shops.length){
+				goSearch(shops[index]);
+			}
 
 		}
 

@@ -3,6 +3,7 @@ package com.example.webtest;
 import android.app.Activity;
 import android.app.Instrumentation;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
@@ -67,6 +68,8 @@ public class WA_MainFragment extends WA_YundaFragment
 		{
 			parameter = (WA_Parameters) bundle.getSerializable(ARG_CODE);
 		}
+		Resources res = getResources();
+		shops = res.getStringArray(R.array.classify);
 	}
 
 	@Override
@@ -213,7 +216,7 @@ public class WA_MainFragment extends WA_YundaFragment
 		btnSearch.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				goSearch("童鞋");
+				goSearch(shops[index]);
 			}
 		});
 		btnGosearch.setOnClickListener(new View.OnClickListener() {

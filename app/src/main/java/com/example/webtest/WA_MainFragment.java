@@ -256,13 +256,21 @@ public class WA_MainFragment extends WA_YundaFragment
 		btn_str_result.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				TAOBAO = shops[0];
-				String str = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAOJZL,"");
-				String rcstr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAORC,"");
-				String titlestr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAOTITLE,"");
-				Log.e("resultStr!!! ",str );
-				Log.e("rcstr!!! ",rcstr );
-				Log.e("titlestr!!! ",titlestr );
+
+
+//				SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"rc", str);
+//				SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"zjl", str);
+//				SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"title", str);
+//				TAOBAO = shops[0];
+				for (int i = 0; i < shops.length; i++) {
+					String str = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,shops[i]+"zjl","");
+					String rcstr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,shops[i]+"rc","");
+					String titlestr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,shops[i]+"title","");
+					Log.e("resultStr!!! ",str );
+					Log.e("rcstr!!! ",rcstr );
+					Log.e("titlestr!!! ",titlestr );
+				}
+
 			}
 		});
 //		startBtn.setOnClickListener(new View.OnClickListener()

@@ -421,8 +421,14 @@ public class WA_YundaFragment extends WA_BaseFragment
 			if (null == rcMap) {
 				rcMap = new HashMap<String, Float>();
 			}
-			jzlMap.put(name, Float.parseFloat(jzl));
-			rcMap.put(name, Float.parseFloat(rc));
+			if (Float.parseFloat(jzl)>Float.parseFloat("0.2")){
+				jzlMap.put(name, Float.parseFloat(jzl));
+			}
+			if (Float.parseFloat(rc)>Float.parseFloat("0.2")){
+				rcMap.put(name, Float.parseFloat(rc));
+			}
+
+
 
 		}
 
@@ -552,7 +558,7 @@ public class WA_YundaFragment extends WA_BaseFragment
         });
 
 		for(Map.Entry<String,Float> mapping:list){
-			str = str + mapping.getKey()+":"+mapping.getValue()+"\n";
+			str = str + mapping.getKey()+"######"+mapping.getValue()+"\n";
         }
 		putSp(str);
 			Log.e("sortMap: ",str);
@@ -560,14 +566,20 @@ public class WA_YundaFragment extends WA_BaseFragment
 
 	private void putSp(String str) {
 		if (str.contains("------title")){
-			titleresultStr = titleresultStr + str;
-			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAOTITLE, titleresultStr);
+//			titleresultStr = titleresultStr + str;
+//			Log.e("titlestr: ",titleresultStr);
+
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"title", str);
 		} else if (str.contains("------zjl")){
-			resultStr = resultStr + str;
-			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAOJZL, resultStr);
+//			resultStr = resultStr + str;
+//			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAOJZL, resultStr);
+//			Log.e("resultStr: ",resultStr);
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"zjl", str);
 		} else if (str.contains("------rc")){
-			rcresultStr = rcresultStr + str;
-			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAORC, rcresultStr);
+//			rcresultStr = rcresultStr + str;
+//			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAORC, rcresultStr);
+//			Log.e("rcresultStr: ",rcresultStr);
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, shops[index]+"rc", str);
 		}
 	}
 

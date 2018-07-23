@@ -12,6 +12,7 @@ import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.example.webtest.io.LogUtil;
+import com.example.webtest.io.SharedPreferencesUtils;
 import com.example.webtest.io.WA_Parameters;
 
 import java.io.IOException;
@@ -42,6 +43,13 @@ public class WA_YundaFragment extends WA_BaseFragment
 	protected String[] shops;
 	protected int index = 0;
 	protected int randomtime = 1000;
+	protected String resultStr = "";
+	protected String rcresultStr = "";
+	protected String titleresultStr = "";
+	protected String TAOBAO = "TAOBAO";
+	protected String TAOBAOJZL = "TAOBAOJZL";
+	protected String TAOBAORC = "TAOBAORC";
+	protected String TAOBAOTITLE = "TAOBAOTITLE";
 
 	protected enum SearchType
 	{
@@ -423,9 +431,9 @@ public class WA_YundaFragment extends WA_BaseFragment
 		public void getHotShopResult()
 		{
 			Log.e(TAG, "------------------------------------------------");
-			sortMap(jzlMap,"---------------------zjl---------------------------"+"\n");
+			sortMap(jzlMap,"---------------------zjl---------------------------"+shops[index]+"\n");
 			Log.e(TAG, "*************************************************");
-			sortMap(rcMap,"---------------------rc---------------------------"+"\n");
+			sortMap(rcMap,"---------------------rc---------------------------"+shops[index]+"\n");
 			mapClear();
 
 			handler.postDelayed(new Runnable() {
@@ -443,7 +451,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 		public void getTitleResult()
 		{
 			Log.e(TAG, "--------------------title----------------------------");
-			sortTitleMap(titleMap,"---------------------title---------------------------"+"\n");
+			sortTitleMap(titleMap,"---------------------title---------------------------"+shops[index]+"\n");
 			titleMap.clear();
 			index++;
 			randomtime =3000+(int)(Math.random()*2000);		//返回大于等于m小于m+n（不包括m+n）之间的随机数
@@ -546,7 +554,21 @@ public class WA_YundaFragment extends WA_BaseFragment
 		for(Map.Entry<String,Float> mapping:list){
 			str = str + mapping.getKey()+":"+mapping.getValue()+"\n";
         }
+		putSp(str);
 			Log.e("sortMap: ",str);
+	}
+
+	private void putSp(String str) {
+		if (str.contains("------title")){
+			titleresultStr = titleresultStr + str;
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAOTITLE, titleresultStr);
+		} else if (str.contains("------zjl")){
+			resultStr = resultStr + str;
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAOJZL, resultStr);
+		} else if (str.contains("------rc")){
+			rcresultStr = rcresultStr + str;
+			SharedPreferencesUtils.putValue(getActivity(), TAOBAO, TAOBAORC, rcresultStr);
+		}
 	}
 
 	private void sortTitleMap(Map map,String str) {
@@ -563,6 +585,7 @@ public class WA_YundaFragment extends WA_BaseFragment
 		for(Map.Entry<String,Float> mapping:list){
 			str = str + mapping.getKey()+"\n";
         }
+		putSp(str);
 			Log.e("sortMap: ",str);
 	}
 

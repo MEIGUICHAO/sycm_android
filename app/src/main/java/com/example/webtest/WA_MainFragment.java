@@ -20,6 +20,7 @@ import android.widget.Button;
 
 import com.example.webtest.base.MyWebView;
 import com.example.webtest.base.WA_YundaFragment;
+import com.example.webtest.io.SharedPreferencesUtils;
 import com.example.webtest.io.WA_Parameters;
 
 /**
@@ -41,6 +42,7 @@ public class WA_MainFragment extends WA_YundaFragment
 	private Button btnGosearch;
 	private Button btnGosearchworld;
 	private Button btnGetchecked,btn_check,btn_biao1;
+	private Button btn_str_result;
 
 	/**  通过静态方法实例化自动化Fragment*/
 	public static void start(Activity mContext, int containerRsID, WA_Parameters parameter)
@@ -94,6 +96,7 @@ public class WA_MainFragment extends WA_YundaFragment
 		btnGetchecked = (Button) view.findViewById(R.id.btn_getchecked);
 		btn_check = (Button) view.findViewById(R.id.btn_check);
 		btn_biao1 = (Button) view.findViewById(R.id.btn_biao1);
+		btn_str_result = (Button) view.findViewById(R.id.btn_str_result);
 	}
 
 	/** 初始化两个不同功用的WebView */
@@ -216,6 +219,7 @@ public class WA_MainFragment extends WA_YundaFragment
 		btnSearch.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
+				TAOBAO = shops[0];
 				goSearch(shops[index],randomtime);
 			}
 		});
@@ -247,6 +251,18 @@ public class WA_MainFragment extends WA_YundaFragment
 			@Override
 			public void onClick(View view) {
 				biao1();
+			}
+		});
+		btn_str_result.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				TAOBAO = shops[0];
+				String str = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAOJZL,"");
+				String rcstr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAORC,"");
+				String titlestr = SharedPreferencesUtils.getValue(getActivity(),TAOBAO,TAOBAOTITLE,"");
+				Log.e("resultStr!!! ",str );
+				Log.e("rcstr!!! ",rcstr );
+				Log.e("titlestr!!! ",titlestr );
 			}
 		});
 //		startBtn.setOnClickListener(new View.OnClickListener()

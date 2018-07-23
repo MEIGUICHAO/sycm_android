@@ -1,255 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="classify">
-        <item>休闲玩具</item>
-        <item>球类玩具</item>
-        <item>飞盘</item>
-        <item>飞碟</item>
-        <item>竹蜻蜓</item>
-        <item>儿童帐篷游戏屋</item>
-        <item>儿童游戏屋</item>
-        <item>摇马</item>
-        <item>儿童拳击袋</item>
-        <item>儿童拳击手套</item>
-        <item>吹泡泡</item>
-        <item>跳绳</item>
-        <item>跳跳玩具</item>
-        <item>儿童玩具飞镖</item>
-        <item>儿童玩具射击射箭</item>
-        <item>海洋球波波球</item>
-        <item>陀螺</item>
-        <item>风车</item>
-        <item>投掷套圈</item>
-        <item>呼啦圈</item>
-        <item>沙包</item>
-        <item>宝宝纪念品</item>
-        <item>宝宝个性产品</item>
-        <item>手脚印</item>
-        <item>纪念册</item>
-        <item>胎毛笔</item>
-        <item>胎毛章</item>
-        <item>胎毛挂坠挂件</item>
-        <item>胎毛绣</item>
-        <item>名字贴</item>
-        <item>挂历</item>
-        <item>脚镯</item>
-        <item>长命锁</item>
-        <item>手镯</item>
-        <item>宝宝饰品套装</item>
-        <item>台历</item>
-        <item>电动遥控机器人</item>
-        <item>发条玩具</item>
-        <item>电动遥控车</item>
-        <item>电动遥控轨道</item>
-        <item>电动遥控飞机</item>
-        <item>电动遥控船类</item>
-        <item>电动遥控动物人物</item>
-        <item>惯性回力滑行玩具</item>
-        <item>儿童棋类桌面游戏</item>
-        <item>强手棋大富翁棋</item>
-        <item>飞行棋</item>
-        <item>跳棋</item>
-        <item>多功能棋</item>
-        <item>儿童桌面游戏类</item>
-        <item>游戏叠叠乐</item>
-        <item>电动遥控玩具零件工具</item>
-        <item>遥控周边设备</item>
-        <item>遥控车升级件零配件</item>
-        <item>遥控飞机零配件</item>
-        <item>四驱车零配件工具</item>
-        <item>早教智能玩具</item>
-        <item>早教机点读学习</item>
-        <item>多功能玩具台游戏桌</item>
-        <item>早教教具早教套装</item>
-        <item>其它早教玩具类</item>
-        <item>儿童MP3故事机</item>
-        <item>宝宝海报胎教海报</item>
-        <item>早教闪卡潜能开发卡</item>
-        <item>智能公仔娃娃</item>
-        <item>磁性贴</item>
-        <item>贴纸</item>
-        <item>玩具挂图认知卡</item>
-        <item>儿童玩具表</item>
-        <item>儿童包背包箱包</item>
-        <item>书包</item>
-        <item>斜挎包拎包腰包</item>
-        <item>零钱包</item>
-        <item>行李箱储物箱</item>
-        <item>拉杆包</item>
-        <item>拉杆箱</item>
-        <item>游泳池戏水玩具</item>
-        <item>戏水玩沙玩具</item>
-        <item>游泳池</item>
-        <item>婴儿儿童游泳圈</item>
-        <item>救生衣</item>
-        <item>充气筒</item>
-        <item>溶质</item>
-        <item>浴帽洗发帽</item>
-        <item>水上游艺设施</item>
-        <item>洗澡书</item>
-        <item>护耳贴</item>
-        <item>泳镜</item>
-        <item>鼻夹</item>
-        <item>耳塞</item>
-        <item>护脐贴</item>
-        <item>童车儿童轮滑</item>
-        <item>自行车</item>
-        <item>儿童电动车</item>
-        <item>三轮车</item>
-        <item>滑板车</item>
-        <item>扭扭车</item>
-        <item>溜冰鞋旱冰鞋</item>
-        <item>童车配件</item>
-        <item>滑板活力板</item>
-        <item>踏行车滑行学步车</item>
-        <item>头盔</item>
-        <item>护具</item>
-        <item>学习实验绘画文具</item>
-        <item>数学学习板计算架</item>
-        <item>描红本涂色本</item>
-        <item>文具礼盒绘画套装</item>
-        <item>削笔器削笔刀</item>
-        <item>卡通造型橡皮</item>
-        <item>笔类</item>
-        <item>科学实验</item>
-        <item>笔袋</item>
-        <item>文件袋</item>
-        <item>文具盒</item>
-        <item>笔筒</item>
-        <item>儿童书法用品</item>
-        <item>坐姿矫正器</item>
-        <item>幼儿爬行学步健身</item>
-        <item>婴儿健身器</item>
-        <item>爬行垫</item>
-        <item>拖拉学步玩具</item>
-        <item>游戏毯音乐毯</item>
-        <item>手推学步玩具</item>
-        <item>幼儿学爬玩具</item>
-        <item>手工制作创意DIY</item>
-        <item>沙画胶画画</item>
-        <item>DIY玉米粒</item>
-        <item>手工创意粘贴类</item>
-        <item>手工折纸剪纸书</item>
-        <item>白模填色模具彩绘</item>
-        <item>织布机手工编织刺绣类</item>
-        <item>手工制作工具彩纸配件</item>
-        <item>手工食品制作</item>
-        <item>手工串珠穿珠首饰编织</item>
-        <item>解锁迷宫魔方智力玩具</item>
-        <item>迷宫类</item>
-        <item>魔方</item>
-        <item>解锁解环玩具</item>
-        <item>智力解题通关玩具</item>
-        <item>仿真过家家玩具</item>
-        <item>其它仿真玩具</item>
-        <item>切切看</item>
-        <item>仿真动物玩偶</item>
-        <item>仿真果蔬食物</item>
-        <item>过家家玩具</item>
-        <item>仿真照相机</item>
-        <item>串珠拼图配对拆装敲打玩具</item>
-        <item>拼图拼板</item>
-        <item>叠叠圈叠套玩具</item>
-        <item>数字屋形状盒多孔认知玩具</item>
-        <item>钓鱼类玩具</item>
-        <item>婴儿手抓球</item>
-        <item>建构拼插积木</item>
-        <item>打地鼠敲击果虫</item>
-        <item>螺母拆装组合玩具</item>
-        <item>婴幼儿串珠绕珠</item>
-        <item>形状配对扭扭蛋</item>
-        <item>螺丝形状配对玩具</item>
-        <item>几何形状套柱</item>
-        <item>插珠蘑菇插钉</item>
-        <item>游乐教学设备大型设施</item>
-        <item>大型组合式游乐设备</item>
-        <item>蹦床</item>
-        <item>摇摆机摇摇乐</item>
-        <item>游艺机</item>
-        <item>游戏围栏</item>
-        <item>感统训练器材教学设备</item>
-        <item>跷跷板</item>
-        <item>隧道钻洞</item>
-        <item>软体组合器材</item>
-        <item>麻将机</item>
-        <item>秋千</item>
-        <item>台球桌</item>
-        <item>洗牌机</item>
-        <item>滑梯</item>
-        <item>桌上冰球</item>
-        <item>桌上足球</item>
-        <item>发牌机</item>
-        <item>乒乓球台</item>
-        <item>音乐玩具儿童乐器</item>
-        <item>八音盒音乐盒</item>
-        <item>电子琴玩具儿童电子琴</item>
-        <item>音乐电话</item>
-        <item>敲琴</item>
-        <item>电动手拍鼓</item>
-        <item>沙锤沙蛋沙球</item>
-        <item>钢琴玩具钢琴</item>
-        <item>玩具小提琴手风琴</item>
-        <item>玩具吉他</item>
-        <item>打击乐器</item>
-        <item>吹奏玩具乐器</item>
-        <item>乐器套装</item>
-        <item>铃类乐器</item>
-        <item>架子鼓</item>
-        <item>音乐话筒</item>
-        <item>幼儿响铃布玩安抚玩具</item>
-        <item>宝宝布书</item>
-        <item>床铃床挂</item>
-        <item>摇铃</item>
-        <item>不倒翁</item>
-        <item>手偶安抚玩偶</item>
-        <item>布质软胶积木</item>
-        <item>拨浪鼓</item>
-        <item>电子发光充气整蛊玩具</item>
-        <item>发光玩具</item>
-        <item>塑料充气玩具</item>
-        <item>创意整蛊玩具</item>
-        <item>电子玩具</item>
-        <item>油动电动模型</item>
-        <item>固定翼</item>
-        <item>坦克</item>
-        <item>车模</item>
-        <item>直升机</item>
-        <item>船模</item>
-        <item>静态模型</item>
-        <item>建筑DIY小屋拼装模型</item>
-        <item>家居生活场景</item>
-        <item>车模</item>
-        <item>飞机模型</item>
-        <item>坦克军事战车</item>
-        <item>船舶舰艇</item>
-        <item>火车模型</item>
-        <item>军舰航母</item>
-        <item>木偶关节木偶</item>
-        <item>儿童机器人变形人偶玩具</item>
-        <item>奥特曼玩具专区</item>
-        <item>儿童机器人变形玩具</item>
-        <item>儿童玩具枪</item>
-        <item>电动玩具枪</item>
-        <item>软弹枪</item>
+        <item>弹弓</item>
+        <item>芭比娃娃</item>
+        <item>玩具枪</item>
+        <item>奥特曼</item>
+        <item>儿童自行车</item>
+        <item>无人机</item>
+        <item>儿童滑板车3轮 溜溜车3-6岁</item>
+        <item>芭比娃娃套装 女孩公主</item>
+        <item>奥特曼 玩具</item>
         <item>水弹枪</item>
-        <item>水枪</item>
-        <item>绘画类用品</item>
-        <item>颜料</item>
-        <item>画笔画刷</item>
-        <item>调色盘</item>
-        <item>颜料绘画组合</item>
-        <item>画布</item>
-        <item>画板</item>
-        <item>绘画桌</item>
+        <item>爆裂飞车3</item>
+        <item>滑板车</item>
+        <item>汪汪队立大功玩具</item>
+        <item>儿童滑板车</item>
+        <item>精准弹弓</item>
         <item>积木</item>
-        <item>多米诺骨牌</item>
-        <item>彩泥粘土软陶泥</item>
-        <item>彩泥橡皮泥</item>
-        <item>软陶泥</item>
-        <item>粘土超轻粘土</item>
-        <item>儿童智能玩具</item>
-        <item>编程玩具</item>
-        <item>app互动玩具</item>
-        <item>意念控制玩具</item>
+        <item>儿童自行车3岁宝宝脚踏车2-4-6岁</item>
+        <item>无人机航拍 高清 专业</item>
+        <item>超变战陀</item>
+        <item>爬行垫</item>
+        <item>粉红豹</item>
+        <item>小猪佩奇</item>
+        <item>积木 男孩子</item>
+        <item>儿童电动车</item>
+        <item>游泳池</item>
+        <item>巴克球</item>
+        <item>乐高积木</item>
+        <item>水枪</item>
+        <item>遥控飞机</item>
+        <item>拼图</item>
+        <item>水弹抢</item>
+        <item>爆裂飞车</item>
+        <item>水雾魔珠</item>
+        <item>儿童三轮车</item>
+        <item>扭扭车</item>
+        <item>遛娃神器</item>
+        <item>魔方</item>
+        <item>魔幻陀螺</item>
+        <item>儿童水枪</item>
+        <item>弓箭</item>
+        <item>陀螺</item>
+        <item>叶罗丽娃娃</item>
+        <item>布朗熊</item>
+        <item>史莱姆</item>
+        <item>跳跃战士</item>
+        <item>指尖陀螺</item>
+        <item>芭比娃娃套装大礼盒 别墅 城堡</item>
+        <item>小猪佩奇手表</item>
+        <item>儿童电动汽车</item>
+        <item>溜娃神器</item>
+        <item>围栏 儿童 游戏 室内</item>
+        <item>毛绒玩具</item>
+        <item>爬行垫加厚 婴儿 客厅</item>
+        <item>太空沙</item>
+        <item>画板 儿童 磁性 涂鸦板</item>
+        <item>大熊</item>
+        <item>儿童游泳池</item>
+        <item>遥控汽车玩具</item>
+        <item>水晶泥</item>
+        <item>娃娃</item>
+        <item>弩</item>
+        <item>玩具 男孩</item>
+        <item>乐高积木 女孩</item>
+        <item>恐龙玩具</item>
+        <item>泡泡机</item>
+        <item>抓娃娃机</item>
+        <item>毛绒玩具 女生 可爱 萌 韩国</item>
+        <item>遥控车</item>
+        <item>儿童三轮车脚踏车1-3</item>
+        <item>妖娆花</item>
+        <item>积木玩具 1-2周岁</item>
+        <item>汪汪队</item>
+        <item>儿童帐篷</item>
+        <item>扭扭车 儿童 溜溜车 万向轮</item>
+        <item>小学生书包</item>
+        <item>积木玩具 3-6周岁</item>
+        <item>书包</item>
+        <item>迷你无人机</item>
+        <item>游戏围栏</item>
+        <item>水枪 玩具</item>
+        <item>磁力片</item>
+        <item>四轮汽车儿童电动车</item>
+        <item>婴儿玩具</item>
+        <item>泡沫飞机</item>
+        <item>diy小屋</item>
+        <item>娃娃公仔 可爱 睡觉抱 女孩</item>
+        <item>无人机玩具</item>
+        <item>芭比娃娃套装</item>
+        <item>儿童玩具枪</item>
+        <item>恐龙玩具 仿真动物</item>
+        <item>儿童电动汽车可坐人</item>
+        <item>宝宝滑板车1-3岁 初学者</item>
+        <item>弓</item>
+        <item>遥控汽车 遥控车</item>
+        <item>悠悠球</item>
+        <item>钓鱼玩具</item>
+        <item>木马</item>
+        <item>扭扭车1-3岁</item>
+        <item>挖掘机玩具车 可坐</item>
+        <item>儿童遥控车可坐</item>
+        <item>粉红豹公仔</item>
+        <item>超级飞侠玩具</item>
+        <item>爬爬垫加厚 家用 婴儿</item>
+        <item>波波粘粘乐</item>
+        <item>小孩自行车3-6岁</item>
+        <item>公仔</item>
+        <item>儿童平衡车</item>
+        <item>玻尿酸鸭</item>
+        <item>儿童 滑板车</item>
+        <item>水晶泥手工制作 全套材料</item>
+        <item>儿童玩具</item>
+        <item>我的世界</item>
+        <item>儿童电动摩托车</item>
+        <item>电子琴</item>
+        <item>宝宝画板</item>
+        <item>充气娃男用娃</item>
+        <item>玩具 女孩</item>
+        <item>婴儿玩具</item>
+        <item>娃娃机</item>
+        <item>爬爬垫</item>
+        <item>手指陀螺</item>
+        <item>科学实验套装</item>
+        <item>儿童玩具汽车可坐人</item>
+        <item>超轻粘土</item>
+        <item>遥控车可坐 儿童</item>
+        <item>儿童化妆品套装 无毒 女孩</item>
+        <item>遥控飞机 直升机 充电 儿童</item>
+        <item>水雾魔珠</item>
+        <item>旺旺队立大功玩具</item>
+        <item>滑板车 儿童 2岁</item>
+        <item>贴纸 儿童</item>
+        <item>儿童枪</item>
+        <item>儿童水弹枪</item>
+        <item>欧布圆环</item>
+        <item>小猪佩奇玩具</item>
+        <item>海洋球</item>
+        <item>幼儿园书包</item>
+        <item>婴儿健身架</item>
+        <item>超级飞侠</item>
+        <item>玩偶</item>
+        <item>儿童钓鱼玩具</item>
+        <item>乐高玩具</item>
+        <item>挖机玩具车 可坐大号</item>
+        <item>决明子</item>
+        <item>滑滑梯室内家用 儿童</item>
+        <item>玩具水弹枪</item>
+        <item>查理九世全套正版</item>
+        <item>早教机</item>
+        <item>布娃娃 女生 儿童 公主抱睡</item>
+        <item>溜溜球</item>
+        <item>猪猪侠</item>
+        <item>叶罗丽娃娃正品 罗丽仙子</item>
+        <item>玩具</item>
+        <item>儿童指甲贴</item>
+        <item>大熊毛绒玩具 2米女生</item>
+        <item>玩具车</item>
+        <item>魔幻车神</item>
+        <item>大熊猫抱抱熊 女生1.6</item>
+        <item>切水果玩具</item>
+        <item>奔驰儿童电动汽车</item>
+        <item>熊 毛绒玩具 送女朋友</item>
+        <item>小水枪</item>
+        <item>水弹 成人玩具</item>
+        <item>汪汪队立大功玩具 男孩版</item>
+        <item>托马斯小火车套装轨道</item>
+        <item>医生玩具套装 女孩</item>
+        <item>食玩 日本</item>
+        <item>奥特曼变身器</item>
+        <item>熊 毛绒玩具 送女友</item>
+        <item>溜娃神器 手推车</item>
+        <item>海底小纵队玩具</item>
+        <item>遥控汽车</item>
+        <item>遥控越野车</item>
+        <item>决明子玩具沙</item>
+        <item>滑滑梯</item>
+        <item>玩具</item>
+        <item>儿童绘画套装</item>
+        <item>挖土机</item>
+        <item>拼图儿童</item>
+        <item>芭比娃娃套装女孩公主</item>
+        <item>科技小制作</item>
+        <item>玩具</item>
+        <item>点读笔</item>
+        <item>恐龙</item>
+        <item>爬爬垫加厚</item>
+        <item>航拍飞行器</item>
+        <item>沙滩玩具</item>
+        <item>洋娃娃</item>
+        <item>画板</item>
+        <item>陀螺玩具 儿童</item>
+        <item>背包水枪</item>
+        <item>婴儿游泳圈</item>
+        <item>水雾魔珠 女孩玩具</item>
+        <item>故事机</item>
+        <item>粘粘乐</item>
+        <item>婴儿游泳池 家用</item>
+        <item>四驱车</item>
+        <item>超轻粘土36色套装 无毒</item>
+
+
     </string-array>
 </resources>
